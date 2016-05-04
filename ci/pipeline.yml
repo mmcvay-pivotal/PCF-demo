@@ -29,7 +29,7 @@ jobs:
       - get: pcf-demo
         trigger: true
       - task: unit
-        file: ci/tasks/unit.yml
+        file: pcf-demo/ci/tasks/unit.yml
         
 
   - name: build-artifact-to-candidate-release
@@ -39,7 +39,7 @@ jobs:
         passed: [ unit-test ]
         trigger: true
       - task: build
-        file: ci/tasks/build.yml
+        file: pcf-demo/ci/tasks/build.yml
       - put: candidate-release
         params: { from: build/pcf-demo.war }
  
