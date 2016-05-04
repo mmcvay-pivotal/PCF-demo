@@ -9,17 +9,13 @@ params:
 
 inputs:
   - name: pcfdemo
-  - name: version
-
+  
 outputs:
   - name: build
 
 run:
   path: pcfdemo/ci/tasks/build.sh
   args: [
-    --input-dir, pcfdemo,
+    --input-dir, pcf-demo,
     --output-dir, build,
-    --version-file, version/number,
-    --artifactId, pcf-demo,
-    --packaging, war
   ]
