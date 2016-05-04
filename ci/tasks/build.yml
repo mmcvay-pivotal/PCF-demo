@@ -8,13 +8,13 @@ params:
   MAVEN_CONFIG:
 
 inputs:
-  - name: pcfdemo
+  - name: pcf-demo
   
 outputs:
   - name: build
 
 run:
-  path: pcfdemo/ci/tasks/build.sh
+  path: pcf-demo/ci/tasks/build.sh
   args: [
     --input-dir, pcf-demo,
     --output-dir, build,
