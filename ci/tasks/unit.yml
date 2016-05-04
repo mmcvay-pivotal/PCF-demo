@@ -11,7 +11,7 @@ inputs:
   - name: pcf-demo
 
 run:
-  path: ci/tasks/unit.sh
+  path: ./ci/tasks/unit.sh
   args: [
     --input-dir, pcf-demo
   ]
