@@ -47,6 +47,7 @@ jobs:
       - put: cf
         params:
             manifest: pcf-demo/manifest.yml
+            path: build/pcfdemo.war
             
             
            
