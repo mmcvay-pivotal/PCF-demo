@@ -32,16 +32,28 @@ jobs:
         file: pcf-demo/ci/tasks/unit.yml
         
 
-  - name: build-artifact-to-candidate-release
-    serial_groups: [ version ]
+  - name: build-artifact
     plan:
       - get: pcf-demo
         passed: [ unit-test ]
         trigger: true
       - task: build
         file: pcf-demo/ci/tasks/build.yml
-      - put: candidate-release
-        params: { from: build/pcf-demo.war }
- 
+        
+  - name: deploy-to-pcf
+    serial: true
+    plan:
+      - { get: pcf-demo, passed: [ build-artifact ], trigger: true }
+      - put: cf
+        params:
+            manifest: pcf-demo/manifest.yml
+            
+            
+           
+        
+        
+      
+      
+
 
   
