@@ -11,7 +11,7 @@ inputs:
 
 outputs:
   - name: war-file
-  - path: target/pcfdemo.war
+    path: target/pcfdemo.war
   
 run:
   path: mvn
