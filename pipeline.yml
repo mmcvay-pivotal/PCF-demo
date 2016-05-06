@@ -9,6 +9,14 @@ resources:
     type: time
     source:
       interval: 60s
+      
+  - name: artifact-s3
+    type: s3
+    source:
+      bucket: pcfdemo-builds
+      regexp: pcfdemo-(.*).war
+      access_key_id: AKIAIO55XQFVCRHLNVBQ
+      secret_access_key: 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
 
 
 jobs:
@@ -21,6 +29,4 @@ jobs:
     - task: maven-package
       privileged: true
       file: git-repo/pipeline/maven-package.yml
-    - task: rename-file
-      file: git-repo/pipeline/rename-file.yml
-
+    
