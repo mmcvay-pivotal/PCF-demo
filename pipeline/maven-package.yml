@@ -9,15 +9,10 @@ image_resource:
 inputs:
   - name: git-repo
 
-#outputs:
-#   - name: jar-file
-#     path: target/pc
-
+outputs:
+  - name: war-file
+  - path: target/pcfdemo.war
   
-run:
-  path: mv
-  args: ["git-repo/target/pcfdemo.war", "artifact/pcfdemo-{{time}}.war"]
-
 run:
   path: mvn
   args: ["-f", "git-repo/pom.xml", "-DskipTests=true", "package"]
