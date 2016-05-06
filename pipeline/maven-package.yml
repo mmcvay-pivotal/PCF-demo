@@ -13,13 +13,14 @@ inputs:
 #   - name: jar-file
 #     path: target/pc
 
+  
+run:
+  path: mv
+  args: ["git-repo/target/pcfdemo.war", "artifact/pcfdemo-{{time}}.war"]
+
 run:
   path: mvn
   args: ["-f", "git-repo/pom.xml", "-DskipTests=true", "package"]
-  
-# run:
-#  path: mv
-#  args: ["git-repo/target/pcfdemo.war", "artifact/pcfdemo-{{time}}.war"]
 
   
 
