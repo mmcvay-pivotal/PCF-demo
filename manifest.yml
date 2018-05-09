@@ -1,7 +1,7 @@
 ---
 applications:
 - name: pcfdemo
-  memory: 512M 
+  #memory: 512M 
   instances: 1
   host: pcfdemo-concourse-2
   path: ./target/pcfdemo.war
