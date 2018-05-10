@@ -3,7 +3,7 @@
 This is the monolithic version of this demo.
 For the micro-services version, please see the microservices branch: https://github.com/Pivotal-Field-Engineering/PCF-demo/tree/micro-services
 
-PCF Demo Notes
+PCF Demo Notes 2
 =========
 
 Push the application initially with no service bound.
